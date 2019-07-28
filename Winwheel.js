@@ -1642,7 +1642,7 @@ Winwheel.prototype.getIndicatedSegment = function()
     }
 
     // Now we can work out the prize won by seeing what prize segment startAngle and endAngle the relativeAngle is between.
-    for (let x = 2; x < (this.segments.length); x ++) {
+    for (let x = 1; x < (this.segments.length); x ++) {
         if ((relativeAngle >= this.segments[x]['startAngle']) && (relativeAngle <= this.segments[x]['endAngle'])) {
             indicatedPrize = x;
             break;
