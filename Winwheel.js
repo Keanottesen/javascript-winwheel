@@ -227,7 +227,14 @@ function Winwheel(options, drawWheel)
     if (drawWheel == true) {
         this.draw(this.clearTheCanvas);
     } else if (this.drawMode == 'segmentImage') {
-        // If segment image then loop though all the segments and load the images for them setting a callback
+        // If segment image then loop though all the 
+        
+        
+        
+        
+        
+        
+        and load the images for them setting a callback
         // which will call the draw function of the wheel once all the images have been loaded.
         winwheelToDrawDuringAnimation = this;
         winhweelAlreadyDrawn = false;
@@ -1619,7 +1626,9 @@ Winwheel.prototype.getIndicatedSegment = function()
 // Works out the segment currently pointed to by the pointer of the wheel. Normally called when the spinning has stopped
 // to work out the prize the user has won. Returns the number of the segment in the segments array.
 // ====================================================================================================================
-Winwheel.prototype.getIndicatedSegmentNumber = function()
+
+
+
 {
     let indicatedPrize = 0;
     let rawAngle = this.getRotationPosition();
@@ -1633,7 +1642,7 @@ Winwheel.prototype.getIndicatedSegmentNumber = function()
     }
 
     // Now we can work out the prize won by seeing what prize segment startAngle and endAngle the relativeAngle is between.
-    for (let x = 1; x < (this.segments.length); x ++) {
+    for (let x = 2; x < (this.segments.length); x ++) {
         if ((relativeAngle >= this.segments[x]['startAngle']) && (relativeAngle <= this.segments[x]['endAngle'])) {
             indicatedPrize = x;
             break;
